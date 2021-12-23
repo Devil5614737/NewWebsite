@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: url("./assets/background.svg");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/background.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header .nav-container .navbar {
+  padding: 1em 11em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .nav-container .navbar .logo p {
+  font-weight: bold;
+  font-size: 2.7rem;
+}
+
+.header .nav-container .navbar .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .nav-container .navbar .links ul li {
+  margin-left: 52px;
+}
+
+.header .nav-container .navbar .links ul li a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.header-content {
+  width: 100%;
+  width: 59%;
+  margin: 80px auto;
+}
+
+.header-content .title {
+  margin-bottom: 22px;
+}
+
+.header-content .title h3 {
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.header-content .para {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 13px;
+}
+
+.header-content .para p {
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.header-content .btn {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: #4226F0;
+  color: white;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  border: none;
+  padding: .5em 1em;
+  font-weight: 900;
+}
+
+.work {
+  width: 100vw;
+  height: 100vh;
+  padding: 11em 11em;
+}
+
+.work .title-container {
+  margin-bottom: 22px;
+}
+
+.work .title-container p:nth-of-type(1) {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.work .title-container p:nth-of-type(2) {
+  color: #4226F0;
+  font-size: 2rem;
+}
+
+.work .project-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 7px;
+  grid-column-gap: 7px;
+}
+
+.work .project-container .project {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.work .project-container .project:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.work .project-container .project:hover .project-text {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.work .project-container .project::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.work .project-container .project img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work .project-container .project .project-text {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 12;
+}
+
+.work .project-container .project .project-text .demo-link {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=app.css.map */
